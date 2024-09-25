@@ -25,10 +25,10 @@ object GivenUsing extends App {
   val specificParam1: Param = Param("App param1")
   val specificParam2: Param = Param("App param2")
 
-//  ??? complexConfig: ComplexConfig = new ComplexConfig(p1, p2, p3, p4, p5)
-//
-//  // Application code
-//  val app: Application = ???
-//  val app2: Application = ???
+  val complexConfig: ComplexConfig = new ComplexConfig(p1, p2, p3, p4, p5)
+
+  // Application code
+  val app: Application = new Application(specificParam1)(complexConfig);
+  val app2: Application = new Application(specificParam2)(complexConfig);
 
 }
